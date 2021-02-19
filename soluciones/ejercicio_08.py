@@ -1,50 +1,19 @@
+#Siguiendo las definiciones del ejercicio 34 del texto guía, utilice un método montecarlo para estimar la fracción de individuos de una población que tienen cancer dado que la medición da un PSA alto, donde las variables p_alto_PSA_dado_no_cancer=0.2, p_alto_PSA_dado_cancer=0.4 y p_cancer=0.6.
 
-# El cancer de prostata es uno de los tipos mas comunes de cancer en hombres.
-# Para saber si alguien tiene cancer de prostata los doctores hacen un
-# examen que mide  los niveles de la proteina PSA (prostate specific
-# antigen) que es producida unicamente por la prostata. 
-# Niveles altos de PSA se correlacionan con la presencia de cancer.
-# Sin embargo, la probabilidad de que una persona sin cancer tenga un
-# nivel elevado de PSA es de 0.135, mientras que la probabilidad de
-# que alguien con cancer tenga un nivel elevado de PSA es de 0.268.
-# Si basado en otros factores se cree que una persona tiene
-# probabilidad 0.7 de tener este cancer. Calcule:
-# a) La probabilidad de tener cancer dado que hay niveles elevedos de
-# PSA.
-# b) La probabiidad de tener cancer dado que hay niveles bajos de PSA.
+#Suponga además que la población tiene solamente N=10 individuos para los cuales se hace la medición de PSA alto. La estimación de P(cancer|PSA alto) se hace entonces sobre esa pequeña población. 
 
-# Escriba una función de python llamada probabilidad_psa_cancer que
-# soluciona el problema mencionado anteriormente a traves de un metodo montecarlo
+#Con un N tan pequeño, el valor de P(cancer|PSA alto) va a ser diferente para cada llamada del método montecarlo. Haga M=100000 llamadas del método montecarlo y grafique el histograma de P(cancer|PSA_alto) en un esquema como el que muestra la figura, donde m es el valor medio de los valores de P(cancer|PSA alto) y s es la desviación estándar de los valores de P(cancer|PSA alto) (los valores de m y s en la figura son ilustrativos).
 
-# La solución se debe hacer para el caso general donde:
 
-# - la probabilidad de tener PSA alto dado que no tiene cancer es la variable p_alto_PSA_dado_no_cancer, 
 
-# - la probabilidad de tener PSA alto dado que tiene cancer es la variable p_alto_PSA_dado_cancer,
+#El programa debe estar en un archivo llamado "ApellidoNombre_Ejercicio08.py" donde Apellido y Nombre debe reemplazarlos con su apellido y nombre.  Suba ese archivo como respuesta a esta actividad.
 
-#- la probabilidad de tener cancer es la variable p_cancer.
+#Al ejecutar "python ApellidoNombre_Ejercicio08.py" no se debe producir ningún error ni imprimir nada en pantalla. Solamente debe producir la gráfica solicitada con el nombre "proba_montecarlo.png". Se considera que el programa no corre si se demora más de 30 segundos en producir la gráfica. 
 
-#A la función probabilidad_psa_cancer deben entrar las tres variables
-#anteriores en el orden p_alto_PSA_dado_no_cancer,
-#p_alto_PSA_dado_cancer, p_cancer 
+#Solamente puede utilizar las funciones y métodos vistos en clase (videos o clases sincrónicas, o que ya se encuentren en el repositorio) . En este caso no se puede usar while. 
 
-# La función debe devolver dos números: la probabilidad de cancer dado
-# PSA alto y la probabilidad de cancer dado PSA bajo. 
 
-#La función debe estar en un archivo llamado
-#"ApellidoNombre_MagistralEjercicio08.py" donde Apellido y Nombre debe
-#reemplazarlos con su apellido y nombre.  Suba ese archivo como
-#respuesta a esta actividad. 
 
-# Al ejecutar "python ApellidoNombre_MagistralEjercicio08.py" no se
-# debe producir ningún error. Se considera que el programa no corre si
-# se demora más de un minuto en producir la respuesta. Cuando
-# califiquemos vamos a llamar tres veces la función y la respuesta
-# debe ser la misma hasta la segunda cifra decimal. 
-
-# Solamente puede utilizar las funciones y métodos vistas en clase
-# (videos o clases sincrónicas, o que ya se encuentren en el
-# repositorio) . 
 
 import numpy as np
 
