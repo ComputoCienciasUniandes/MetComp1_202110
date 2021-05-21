@@ -50,3 +50,4 @@ def ajuste_matricial(valores_x, valores_y, p_poli):
     
 
 #ajuste_matricial([1,2,4,6],[4,8,7,1],3)
+#ajuste_matricial([-2.0, -2.0, 0.0, 3.0, 4.0], [5.0, 1.0, -3.0, -2.0, -5.5],1)
