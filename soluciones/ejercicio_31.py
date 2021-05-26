@@ -48,7 +48,7 @@ after = [70,85,90,110,71,80,69,74]
 
 # vamos a implementar un metodo de shuffling. para hacer esto la hipotesis nula
 # es que ambas series de datos vienen de la misma distribucion. 
-# la estadistica que vamos a calcular es la diferencia entre los promedios de las dos distribuciones. 
+# la estadistica que vamos a calcular es el promedio de las diferencias
 
 n_mc = 10000
 n = len(before)
